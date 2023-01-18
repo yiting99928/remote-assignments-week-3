@@ -18,7 +18,7 @@ function getData(num) {
     return new Promise((resolve, reject) => {
         const req = new XMLHttpRequest();
         //定義方法
-        req.open("GET", `http://localhost:3000/getData?number=${num}`);
+        req.open("GET", `https://remote-assignments-week-3.onrender.com/getData?number=${num}`);
         //當請求完成進行函式的結果
         req.onload = () => {
             if (req.status == 200) {
