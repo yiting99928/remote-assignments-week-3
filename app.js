@@ -27,9 +27,11 @@ app.use((req, res, next) => {
     res.status(err.status);
     res.render('error');
   });
+
   
-// const port = process.env.PORT || 3001;
-// app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-// // app.listen(3000, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+// app.listen(3000, () => {
 //     console.log('連接成功:3000!')
 // });
