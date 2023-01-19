@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send('Hello')
+    res.send('Hello, My Server')
 });
 
 router.get('/myName', (req, res) => {
@@ -27,7 +27,7 @@ router.post('/myName', (req, res) => {
 
 router.get('/trackName', (req, res) => {
     const name = req.cookies.username;
-    const trackName = (req.query.name);
+    const trackName = req.query.name;
     if (name==trackName) {
         res.send(trackName)
     } else{
